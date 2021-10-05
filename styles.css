@@ -118,7 +118,7 @@ aside img {
 
 .images {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem auto;
   margin: 1rem auto;
 }
@@ -134,17 +134,21 @@ strong {
 #first {
   float: left;
   width: 50%;
-  animation: text-flow 10s infinite linear;
+  animation: text-flow 33s infinite linear;
 }
 
 #second {
   float: left;
   width: 50%;
-  animation: text-flow 10s infinite linear;
+  animation: text-flow 33s infinite linear;
 }
 
 #animation {
   width: 200%;
+}
+
+#animation:hover > section {
+  animation-play-state: paused;
 }
 
 @keyframes text-flow {
