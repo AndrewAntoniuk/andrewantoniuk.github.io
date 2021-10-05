@@ -10,7 +10,9 @@ body {
   padding: 0;
   background-color: rgb(238, 238, 238);
   line-height: 1.5rem;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
+  min-width: 450px;
 }
 
 body.black {
@@ -28,7 +30,8 @@ header {
   background-color: white;
   border-bottom: 1px solid lightgray;
   height: 10vh;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 
 header.black {
@@ -44,7 +47,8 @@ h2 {
 hr {
   color: lightgray;
   margin: 0;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 
 hr.black {
@@ -61,7 +65,8 @@ footer {
   padding: 1rem;
   text-align: right;
   background-color: white;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 
 footer.black {
@@ -70,6 +75,7 @@ footer.black {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 li {
@@ -80,6 +86,7 @@ header ul {
   padding-left: 0;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 header li {
@@ -89,7 +96,7 @@ header li {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: all 0.5s linear;
 }
 
 a:hover {
@@ -101,15 +108,16 @@ a:hover.black {
 }
 
 button {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: black;
   border: 0px;
   border-radius: 1rem;
-  background-color: lightcyan;
+  background-color: rgb(255, 209, 150);
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 button.black {
   color: white;
@@ -121,7 +129,8 @@ button.black {
   background-color: white;
   padding: 1.5rem 1.5rem 0 1.5rem;
   flex-direction: column;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 
 .info.black {
@@ -134,9 +143,10 @@ button.black {
   margin-left: 3rem;
   padding: 1rem;
   width: 100%;
-  background-color: aliceblue;
+  background-color: rgb(255, 219, 172);
   height: 10%;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
 }
 
 .info.black aside {
@@ -163,13 +173,15 @@ aside img {
 
 .list-skill {
   border-radius: 1rem;
-  background-color: lightcyan;
+  background-color: rgb(255, 209, 150);
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-around;
   padding: 0.5rem;
-  transition: all 1s linear;
+  transition: color 1s linear;
+  transition: background-color 1s linear;
+  flex-wrap: wrap;
 }
 
 .list-skill.black {
@@ -207,6 +219,17 @@ strong {
   animation: text-flow 33s infinite linear;
 }
 
+#third {
+  width: 100%;
+  animation: none;
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+}
+
 #animation {
   width: 200%;
 }
@@ -219,6 +242,54 @@ strong {
   font-size: 1.5rem;
 }
 
+.fas.fa-adjust {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 1800px) {
+  body {
+    font-size: 36px;
+    line-height: 2rem;
+  }
+  button {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    font-size: 14px;
+  }
+
+  #header-ul > li:last-child button {
+    font-size: 0.7rem;
+  }
+  #animation {
+    display: none;
+  }
+  #third {
+    display: grid;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
 @keyframes text-flow {
   0% {
     transform: translateX(0%);
