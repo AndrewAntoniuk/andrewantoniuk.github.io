@@ -10,6 +10,12 @@ body {
   padding: 0;
   background-color: rgb(238, 238, 238);
   line-height: 1.5rem;
+  transition: all 1s linear;
+}
+
+body.black {
+  background-color: rgb(17, 17, 17);
+  color: white;
 }
 
 header {
@@ -22,6 +28,12 @@ header {
   background-color: white;
   border-bottom: 1px solid lightgray;
   height: 10vh;
+  transition: all 1s linear;
+}
+
+header.black {
+  background-color: black;
+  border-bottom: 1px solid gray;
 }
 
 header nav,
@@ -32,17 +44,28 @@ h2 {
 hr {
   color: lightgray;
   margin: 0;
+  transition: all 1s linear;
+}
+
+hr.black {
+  color: gray;
 }
 
 main {
   width: 70%;
   margin: 10vh auto 0;
+  overflow: hidden;
 }
 
 footer {
   padding: 1rem;
   text-align: right;
   background-color: white;
+  transition: all 1s linear;
+}
+
+footer.black {
+  background-color: black;
 }
 
 ul {
@@ -65,22 +88,43 @@ header li {
 a {
   color: inherit;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: rgb(107, 82, 247);
+  transition: all 1s linear;
+}
+
+a:hover.black {
+  color: rgb(208, 96, 252);
 }
 
 .info {
   display: flex;
   background-color: white;
   padding: 1.5rem 1.5rem 0 1.5rem;
+  flex-direction: column;
+  transition: all 1s linear;
+}
+
+.info.black {
+  background-color: black;
 }
 
 .info aside {
-  border-top-left-radius: 0.8rem;
-  border-top-right-radius: 0.8rem;
+  border-radius: 0.8rem;
   margin-top: 1rem;
   margin-left: 3rem;
   padding: 1rem;
   width: 100%;
   background-color: lightcyan;
+  height: 10%;
+  transition: all 1s linear;
+}
+
+.info.black aside {
+  background-color: #77314c;
 }
 
 i {
@@ -109,18 +153,70 @@ aside img {
   text-align: center;
   justify-content: space-around;
   padding: 0.5rem;
+  transition: all 1s linear;
 }
+
+.list-skill.black {
+  background-color: #aa5073;
+}
+
 .list-skill li {
   padding: 0.75rem;
 }
 
 .images {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem auto;
   margin: 1rem auto;
 }
 strong {
   display: inline-block;
   margin-bottom: 0.7rem;
+}
+
+#about-me {
+  display: flex;
+}
+
+#first {
+  float: left;
+  width: 50%;
+  animation: text-flow 33s infinite linear;
+}
+
+#second {
+  float: left;
+  width: 50%;
+  animation: text-flow 33s infinite linear;
+}
+
+#animation {
+  width: 200%;
+}
+
+#animation:hover > section {
+  animation-play-state: paused;
+}
+
+#projects li {
+  font-size: 1.5rem;
+}
+
+@keyframes text-flow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text-flow2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
