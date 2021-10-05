@@ -37,6 +37,7 @@ hr {
 main {
   width: 70%;
   margin: 10vh auto 0;
+  overflow: hidden;
 }
 
 footer {
@@ -128,4 +129,38 @@ strong {
 
 #about-me {
   display: flex;
+}
+
+#first {
+  float: left;
+  width: 50%;
+  animation: text-flow 10s infinite linear;
+}
+
+#second {
+  float: left;
+  width: 50%;
+  animation: text-flow 10s infinite linear;
+}
+
+#animation {
+  width: 200%;
+}
+
+@keyframes text-flow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text-flow2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
