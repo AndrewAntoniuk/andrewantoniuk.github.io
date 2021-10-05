@@ -61,6 +61,7 @@ footer {
   padding: 1rem;
   text-align: right;
   background-color: white;
+  transition: all 1s linear;
 }
 
 footer.black {
@@ -92,6 +93,7 @@ a {
 
 a:hover {
   color: rgb(107, 82, 247);
+  transition: all 1s linear;
 }
 
 a:hover.black {
@@ -103,6 +105,7 @@ a:hover.black {
   background-color: white;
   padding: 1.5rem 1.5rem 0 1.5rem;
   flex-direction: column;
+  transition: all 1s linear;
 }
 
 .info.black {
@@ -117,6 +120,7 @@ a:hover.black {
   width: 100%;
   background-color: lightcyan;
   height: 10%;
+  transition: all 1s linear;
 }
 
 .info.black aside {
@@ -149,6 +153,7 @@ aside img {
   text-align: center;
   justify-content: space-around;
   padding: 0.5rem;
+  transition: all 1s linear;
 }
 
 .list-skill.black {
