@@ -79,6 +79,7 @@ li {
 header ul {
   padding-left: 0;
   display: flex;
+  align-items: center;
 }
 
 header li {
@@ -93,11 +94,26 @@ a {
 
 a:hover {
   color: rgb(107, 82, 247);
-  transition: all 1s linear;
 }
 
 a:hover.black {
   color: rgb(208, 96, 252);
+}
+
+button {
+  font-size: 0.9rem;
+  color: black;
+  border: 0px;
+  border-radius: 1rem;
+  background-color: lightcyan;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all 1s linear;
+}
+button.black {
+  color: white;
+  background-color: #77314c;
 }
 
 .info {
@@ -118,7 +134,7 @@ a:hover.black {
   margin-left: 3rem;
   padding: 1rem;
   width: 100%;
-  background-color: lightcyan;
+  background-color: aliceblue;
   height: 10%;
   transition: all 1s linear;
 }
@@ -147,7 +163,7 @@ aside img {
 
 .list-skill {
   border-radius: 1rem;
-  background-color: aliceblue;
+  background-color: lightcyan;
   display: flex;
   align-items: center;
   text-align: center;
